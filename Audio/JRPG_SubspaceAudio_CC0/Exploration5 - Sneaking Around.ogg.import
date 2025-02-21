@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://3um1dkguggnu"
+path="res://.godot/imported/Exploration5 - Sneaking Around.ogg-9bf6b57f68338ac0c68c62e5b6cd3404.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/JRPG_SubspaceAudio_CC0/Exploration5 - Sneaking Around.ogg"
+dest_files=["res://.godot/imported/Exploration5 - Sneaking Around.ogg-9bf6b57f68338ac0c68c62e5b6cd3404.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
