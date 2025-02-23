@@ -1,6 +1,12 @@
 extends Node
 class_name Options
 
+func _enter_tree():
+	Load()
+
+func _exit_tree():
+	Save()
+
 static var game_data : Dictionary = {
 	"float_vars":{},
 	"int_vars":{},
@@ -8,7 +14,6 @@ static var game_data : Dictionary = {
 	"bool_vars":{},
 	"color_vars":{},
 }
-		
 
 # ██ ███    ██ ████████     ██    ██  █████  ██████  ███████ 
 # ██ ████   ██    ██        ██    ██ ██   ██ ██   ██ ██      
@@ -140,6 +145,7 @@ static func Save():
 
 static var has_been_loaded : bool
 static func Load():
+	# once loaded, don't load again until game restarts!
 	if !has_been_loaded:
 		var file = FileAccess.open("user://save.json", FileAccess.READ)
 		var json_string : String = file.get_as_text()

@@ -1,4 +1,4 @@
 extends Node
-
+class_name GameScene
 func _ready():
-	Messages.set_scene_as_current.emit(self)
+	MessageSystemExample.scene_management.set_scene_as_current.emit(self)
