@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://v7185rs5s4dn"]
 
-[ext_resource type="Script" uid="uid://ctt8jm2v4tf0p" path="res://Scripts/AudioManagement/ExampleScripts/change_song_button.gd" id="1_qn2x3"]
+[ext_resource type="Script" uid="uid://ctt8jm2v4tf0p" path="res://Tools/AudioManagement/ExampleScripts/change_song_button.gd" id="1_qn2x3"]
 
 [node name="MusicManagementExamples" type="Node"]
 

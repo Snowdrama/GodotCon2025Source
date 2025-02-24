@@ -1,6 +1,9 @@
 extends Node
 class_name Options
 
+func _ready():
+	self.process_mode = Node.PROCESS_MODE_ALWAYS
+	
 func _enter_tree():
 	Load()
 
@@ -13,6 +16,7 @@ static var game_data : Dictionary = {
 	"string_vars":{},
 	"bool_vars":{},
 	"color_vars":{},
+	"dict_vars":{},
 }
 
 # ██ ███    ██ ████████     ██    ██  █████  ██████  ███████ 
@@ -123,6 +127,28 @@ static func has_color(key:String) -> bool:
 		return true
 	return false
 	
+	
+	
+	
+	
+	
+	
+	
+static func set_dict(key:String, value:Dictionary):
+	game_data["dict_vars"].set(key, value)
+	Save()
+	
+static func get_dict(key:String, default:Dictionary = {}) -> Dictionary:
+	Load()
+	if !has_dict(key):
+		game_data["dict_vars"].set(key, default)
+	return game_data["dict_vars"].get(key) 
+
+static func has_dict(key:String) -> bool:
+	if game_data["dict_vars"].has(key):
+		return true
+	return false
+	
 # ███████  █████  ██    ██ ███████ 
 # ██      ██   ██ ██    ██ ██      
 # ███████ ███████ ██    ██ █████   
@@ -133,7 +159,7 @@ static func Save():
 	Load() # load first to be sure we have all the data
 	validate_data()
 	var json_string = JSON.stringify(game_data)
-	var file = FileAccess.open("user://save.json", FileAccess.WRITE)
+	var file = FileAccess.open("user://options.json", FileAccess.WRITE)
 	file.store_string(json_string)
 	file.close()
 	
@@ -147,13 +173,26 @@ static var has_been_loaded : bool
 static func Load():
 	# once loaded, don't load again until game restarts!
 	if !has_been_loaded:
-		var file = FileAccess.open("user://save.json", FileAccess.READ)
-		var json_string : String = file.get_as_text()
+		var file = FileAccess.open("user://options.json", FileAccess.READ)
+		var json_string : String = ""
+		if file != null && file.get_error() == OK:
+			json_string = file.get_as_text()
+		else:
+			file = FileAccess.open("user://options.json", FileAccess.WRITE_READ)
+			
 		file.close()
 		has_been_loaded = true
-		if json_string != null:
-			game_data = JSON.parse_string(json_string)
-			validate_data()
+		var json = JSON.new()
+		var error = json.parse(json_string)
+		if error == OK:
+			game_data = {}
+			game_data = json.data
+		else:
+			print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
+			print("Creating New Options Data")
+			game_data = {}
+			Save()
+		validate_data()
 
 static func validate_data():
 	if game_data == null:
@@ -163,5 +202,18 @@ static func validate_data():
 			"string_vars":{},
 			"bool_vars":{},
 			"color_vars":{},
+			"dict_vars":{},
 		}
+	if !game_data.has("float_vars"):
+		game_data.set("float_vars", {})
+	if !game_data.has("int_vars"):
+		game_data.set("int_vars", {})
+	if !game_data.has("string_vars"):
+		game_data.set("string_vars", {})
+	if !game_data.has("bool_vars"):
+		game_data.set("bool_vars", {})
+	if !game_data.has("color_vars"):
+		game_data.set("color_vars", {})
+	if !game_data.has("dict_vars"):
+		game_data.set("dict_vars", {})
 		

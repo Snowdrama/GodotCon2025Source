@@ -9,6 +9,9 @@ var current_transition : Transition
 enum TransitionState { NONE, HIDING_SCREEN, WAITING, SHOWING_SCREEN }
 var state : TransitionState = TransitionState.NONE
 
+func _ready():
+	self.process_mode = Node.PROCESS_MODE_ALWAYS
+	
 func _process(delta):
 	match state:
 		TransitionState.NONE: 

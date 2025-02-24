@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="UIRouter" load_steps=2 format=3 uid="uid://df3khd1h4rk71"]
 
-[ext_resource type="Script" uid="uid://cegqeyv6nk8kb" path="res://Scripts/UIRouting/ui_router.gd" id="1_ex81y"]
+[ext_resource type="Script" uid="uid://cegqeyv6nk8kb" path="res://Tools/UIRouting/ui_router.gd" id="1_ex81y"]
 
 [resource]
 script = ExtResource("1_ex81y")

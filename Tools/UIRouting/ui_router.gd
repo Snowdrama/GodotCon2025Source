@@ -58,3 +58,6 @@ func close_all():
 	for item in route_stack:
 		routes[item].close_route()
 	route_stack.clear()
+	
+func open_route_count() -> int:
+	return len(route_stack)

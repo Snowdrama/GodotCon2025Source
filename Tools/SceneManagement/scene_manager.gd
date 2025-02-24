@@ -26,6 +26,7 @@ func _exit_tree():
 	
 	
 func _ready():
+	self.process_mode = Node.PROCESS_MODE_ALWAYS
 	print_rich("[wave amp=25.0 freq=10.0][color=#0080FF]Reminder the SceneManager uses the first node's name in the file, NOT THE SCENES FILE NAME!!!![/color][/wave]");
 	print_rich("[wave amp=25.0 freq=10.0][color=#00FF80]Also that if the name contains spaces it will escape them with underscores!!![/color][/wave]");
 	
@@ -42,6 +43,10 @@ func load_scenes_from_directory(resource_path:String, scene_resource_path:DirAcc
 		var possible_path = resource_path + "/" + path
 		print("loading from path: ", possible_path)
 		#I forgot why this is needed but sometimes this happens
+		
+		if possible_path.contains(".tmp"):
+			continue
+			
 		if possible_path.contains(".remap"):
 			possible_path = possible_path.replace(".remap", "")
 		
@@ -50,6 +55,10 @@ func load_scenes_from_directory(resource_path:String, scene_resource_path:DirAcc
 			printerr("Path ", possible_path, "doesn't contain a path the resource loader can read")
 		
 		var possibly_a_scene = ResourceLoader.load(possible_path) as PackedScene
+		
+		if possibly_a_scene == null:
+			continue
+		
 		var name = possibly_a_scene.get_state().get_node_name(0).replace(" ", "_")
 		
 		if !scene_list.has(name):

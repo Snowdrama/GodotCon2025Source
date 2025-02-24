@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://py33opxx7f1s"]
 
-[ext_resource type="Script" uid="uid://b842l2y24lqaq" path="res://Scripts/SceneManagement/game_scene.gd" id="1_r2mop"]
-[ext_resource type="Script" uid="uid://bqmf2o1t61e0" path="res://Scripts/SceneManagement/go_to_scene_button.gd" id="2_vjxn5"]
-[ext_resource type="Script" uid="uid://by6kq5rplgj1n" path="res://Scripts/UIRouting/ui_exit_game_button.gd" id="3_iiugm"]
+[ext_resource type="Script" uid="uid://b842l2y24lqaq" path="res://Tools/SceneManagement/game_scene.gd" id="1_r2mop"]
+[ext_resource type="Script" uid="uid://bqmf2o1t61e0" path="res://Tools/SceneManagement/go_to_scene_button.gd" id="2_vjxn5"]
+[ext_resource type="Script" uid="uid://by6kq5rplgj1n" path="res://Tools/UIRouting/Buttons/ui_exit_game_button.gd" id="3_iiugm"]
 
 [node name="MainMenuExample" type="Node"]
 script = ExtResource("1_r2mop")
@@ -30,7 +30,7 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 111
-text = "Scene 1"
+text = "Some Game!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -44,5 +44,5 @@ target_scene_name = "GameSceneExample"
 [node name="ExitGame" type="Button" parent="CanvasLayer/Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Play Game"
+text = "Exit Game"
 script = ExtResource("3_iiugm")

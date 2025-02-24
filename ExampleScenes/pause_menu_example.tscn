@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://qjeufo2nrq51"]
 
-[ext_resource type="Script" uid="uid://cju10up383l6q" path="res://Scripts/UIRouting/ui_open_route_button.gd" id="1_3jat4"]
-[ext_resource type="Script" uid="uid://c3lqj5i88epmg" path="res://Scripts/UIRouting/ui_open_route_with_key.gd" id="1_msf1s"]
-[ext_resource type="Resource" uid="uid://df3khd1h4rk71" path="res://Scripts/UIRouting/pause_menu_router.tres" id="2_dtf8b"]
-[ext_resource type="Script" uid="uid://bgftnwjdgcsm7" path="res://Scripts/UIRouting/ui_route.gd" id="3_a1g3n"]
-[ext_resource type="Script" uid="uid://ynkomd4oe1kg" path="res://Scripts/UIRouting/ui_close_all_routes_button.gd" id="4_hr653"]
-[ext_resource type="Script" uid="uid://020go2coweop" path="res://Scripts/Options/ExampleScripts/VolumeSliderExample.gd" id="5_e6kwj"]
-[ext_resource type="Script" uid="uid://xbnqvou2ejce" path="res://Scripts/UIRouting/ui_back_button.gd" id="6_cehxv"]
+[ext_resource type="Script" uid="uid://cju10up383l6q" path="res://Tools/UIRouting/Buttons/ui_open_route_button.gd" id="1_3jat4"]
+[ext_resource type="Script" uid="uid://c3lqj5i88epmg" path="res://Tools/UIRouting/ui_open_route_with_key.gd" id="1_msf1s"]
+[ext_resource type="Resource" uid="uid://df3khd1h4rk71" path="res://Tools/UIRouting/ExampleResources/pause_menu_router_example.tres" id="2_dtf8b"]
+[ext_resource type="Script" uid="uid://bgftnwjdgcsm7" path="res://Tools/UIRouting/ui_route.gd" id="3_a1g3n"]
+[ext_resource type="Script" uid="uid://ynkomd4oe1kg" path="res://Tools/UIRouting/Buttons/ui_close_all_routes_button.gd" id="4_hr653"]
+[ext_resource type="Script" uid="uid://020go2coweop" path="res://Tools/Options/OptionInputScripts/VolumeSlider.gd" id="5_e6kwj"]
+[ext_resource type="Script" uid="uid://xbnqvou2ejce" path="res://Tools/UIRouting/Buttons/ui_back_button.gd" id="6_cehxv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4r4p"]
 bg_color = Color(0.804688, 0.483516, 0.501536, 1)

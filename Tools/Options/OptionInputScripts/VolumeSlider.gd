@@ -1,5 +1,5 @@
 extends Slider
-
+class_name VolumeSlider
 @export var option_key : AudioMixer.VolumeKeyType
 
 func _ready():

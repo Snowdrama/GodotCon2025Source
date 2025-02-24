@@ -1,15 +1,15 @@
 [gd_scene load_steps=12 format=3 uid="uid://ddjp6orndxteh"]
 
-[ext_resource type="Script" uid="uid://bm2lxbqplsx8s" path="res://Scripts/SceneManagement/scene_manager.gd" id="1_8hn17"]
-[ext_resource type="Script" uid="uid://y6fw2j3infwg" path="res://Scripts/SceneManagement/transition_manager.gd" id="4_s3kx2"]
-[ext_resource type="Script" uid="uid://1hvyxib5yknn" path="res://Scripts/SceneManagement/color_rect_fade_transition.gd" id="5_yk06e"]
+[ext_resource type="Script" uid="uid://bm2lxbqplsx8s" path="res://Tools/SceneManagement/scene_manager.gd" id="1_8hn17"]
+[ext_resource type="Script" uid="uid://y6fw2j3infwg" path="res://Tools/SceneManagement/transition_manager.gd" id="4_s3kx2"]
+[ext_resource type="Script" uid="uid://1hvyxib5yknn" path="res://Tools/SceneManagement/color_rect_fade_transition.gd" id="5_yk06e"]
 [ext_resource type="AudioStream" uid="uid://rva3xuv6h4iv" path="res://Audio/JRPG_SubspaceAudio_CC0/Exploration1 - Grasslands.ogg" id="6_1m6hl"]
 [ext_resource type="AudioStream" uid="uid://bvj7mccjncc2s" path="res://Audio/JRPG_SubspaceAudio_CC0/Exploration2 - Military Base.ogg" id="7_k3cux"]
 [ext_resource type="AudioStream" uid="uid://wwjxdxf0r05y" path="res://Audio/JRPG_SubspaceAudio_CC0/Exploration4 - Prairie Nights.ogg" id="8_60xx5"]
 [ext_resource type="AudioStream" uid="uid://r1jvvt4ptnad" path="res://Audio/JRPG_SubspaceAudio_CC0/Action1 - Encounter With The Witches.ogg" id="9_3o6p2"]
-[ext_resource type="Script" uid="uid://b8qyn1wbo2gow" path="res://Scripts/AudioManagement/music_manager.gd" id="10_vnme7"]
-[ext_resource type="Script" uid="uid://y6h1jm4bmc6o" path="res://Scripts/Options/Options.gd" id="11_kn81p"]
-[ext_resource type="Script" uid="uid://dv6k6gcwencyk" path="res://Scripts/AudioManagement/audio_mixer.gd" id="12_hsicv"]
+[ext_resource type="Script" uid="uid://b8qyn1wbo2gow" path="res://Tools/AudioManagement/music_manager.gd" id="10_vnme7"]
+[ext_resource type="Script" uid="uid://y6h1jm4bmc6o" path="res://Tools/Options/Options.gd" id="11_kn81p"]
+[ext_resource type="Script" uid="uid://dv6k6gcwencyk" path="res://Tools/AudioManagement/audio_mixer.gd" id="12_hsicv"]
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_otfgd"]
 clip_count = 4

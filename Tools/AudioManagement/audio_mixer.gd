@@ -1,6 +1,5 @@
 extends Node
 class_name AudioMixer
-@export var mixer : AudioBusLayout
 
 const MASTER_VOLUME_KEY : String = "Master"
 const MUSIC_VOLUME_KEY : String = "Music"
@@ -37,7 +36,8 @@ func _exit_tree():
 	
 func set_mixer_value(mixer_channel:String, value : float):
 	var index = AudioServer.get_bus_index(mixer_channel)
-	var value_in_db = linear_to_db(value)
-	AudioServer.set_bus_volume_db(index, value_in_db)
+	if index != -1:
+		var value_in_db = linear_to_db(value)
+		AudioServer.set_bus_volume_db(index, value_in_db)
 	pass
 	

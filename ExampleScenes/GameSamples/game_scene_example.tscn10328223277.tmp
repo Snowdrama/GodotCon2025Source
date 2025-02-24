@@ -1,16 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://qcsi8itb3pvc"]
+[gd_scene load_steps=13 format=3 uid="uid://qcsi8itb3pvc"]
 
-[ext_resource type="Script" uid="uid://b842l2y24lqaq" path="res://Tools/SceneManagement/game_scene.gd" id="1_mvac2"]
-[ext_resource type="Script" uid="uid://61ry8047i8v2" path="res://Tools/UIRouting/Common/pause_menu_toggle.gd" id="2_1bxhj"]
-[ext_resource type="Resource" uid="uid://df3khd1h4rk71" path="res://Tools/UIRouting/ExampleResources/pause_menu_router_example.tres" id="3_rik0c"]
-[ext_resource type="Script" uid="uid://bgftnwjdgcsm7" path="res://Tools/UIRouting/ui_route.gd" id="4_1bxhj"]
-[ext_resource type="Script" uid="uid://c65uat3gw4kjk" path="res://Tools/AudioManagement/ExampleScripts/change_song_when_paused.gd" id="4_hgagt"]
-[ext_resource type="Script" uid="uid://ynkomd4oe1kg" path="res://Tools/UIRouting/Buttons/ui_close_all_routes_button.gd" id="5_hgagt"]
-[ext_resource type="Script" uid="uid://cju10up383l6q" path="res://Tools/UIRouting/Buttons/ui_open_route_button.gd" id="6_fjyg4"]
-[ext_resource type="Script" uid="uid://020go2coweop" path="res://Tools/Options/OptionInputScripts/VolumeSlider.gd" id="7_7ccin"]
-[ext_resource type="Script" uid="uid://xbnqvou2ejce" path="res://Tools/UIRouting/Buttons/ui_back_button.gd" id="8_g7l8x"]
-[ext_resource type="Script" uid="uid://by6kq5rplgj1n" path="res://Tools/UIRouting/Buttons/ui_exit_game_button.gd" id="9_1bxhj"]
-[ext_resource type="Script" uid="uid://bqmf2o1t61e0" path="res://Tools/SceneManagement/go_to_scene_button.gd" id="9_rik0c"]
+[ext_resource type="Script" uid="uid://b842l2y24lqaq" path="res://Scripts/SceneManagement/game_scene.gd" id="1_mvac2"]
+[ext_resource type="Script" uid="uid://61ry8047i8v2" path="res://Scripts/UIRouting/Common/pause_menu_toggle.gd" id="2_1bxhj"]
+[ext_resource type="Resource" uid="uid://df3khd1h4rk71" path="res://Scripts/UIRouting/ExampleResources/pause_menu_router_example.tres" id="3_rik0c"]
+[ext_resource type="Script" uid="uid://bgftnwjdgcsm7" path="res://Scripts/UIRouting/ui_route.gd" id="4_1bxhj"]
+[ext_resource type="Script" uid="uid://ynkomd4oe1kg" path="res://Scripts/UIRouting/Buttons/ui_close_all_routes_button.gd" id="5_hgagt"]
+[ext_resource type="Script" uid="uid://cju10up383l6q" path="res://Scripts/UIRouting/Buttons/ui_open_route_button.gd" id="6_fjyg4"]
+[ext_resource type="Script" uid="uid://020go2coweop" path="res://Scripts/Options/OptionInputScripts/VolumeSlider.gd" id="7_7ccin"]
+[ext_resource type="Script" uid="uid://xbnqvou2ejce" path="res://Scripts/UIRouting/Buttons/ui_back_button.gd" id="8_g7l8x"]
+[ext_resource type="Script" uid="uid://by6kq5rplgj1n" path="res://Scripts/UIRouting/Buttons/ui_exit_game_button.gd" id="9_1bxhj"]
+[ext_resource type="Script" uid="uid://bqmf2o1t61e0" path="res://Scripts/SceneManagement/go_to_scene_button.gd" id="9_rik0c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4r4p"]
 bg_color = Color(0.804688, 0.483516, 0.501536, 1)
@@ -44,10 +43,6 @@ script = ExtResource("1_mvac2")
 [node name="PauseMenu" type="Node" parent="."]
 script = ExtResource("2_1bxhj")
 router = ExtResource("3_rik0c")
-
-[node name="PauseMusic" type="Node" parent="PauseMenu"]
-script = ExtResource("4_hgagt")
-paused_song = "PrairieNights"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="PauseMenu"]
 

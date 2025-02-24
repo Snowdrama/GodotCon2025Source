@@ -8,6 +8,7 @@ class_name UIRoute
 var route_open : bool
 
 func _ready():
+	self.process_mode = Node.PROCESS_MODE_ALWAYS
 	if start_open:
 		open_route()
 	else:
